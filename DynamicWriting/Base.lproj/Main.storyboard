@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KzF-iB-Sz2">
+                                <rect key="frame" x="37" y="48" width="302" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Xbt-um-3dw"/>
+                                </connections>
+                            </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b3f-SZ-PI2">
+                                <rect key="frame" x="0.0" y="218" width="375" height="449"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4R3-zo-DT3">
+                                <rect key="frame" x="123" y="104" width="129" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="IN0-Ad-AcD"/>
+                                    <constraint firstAttribute="width" constant="96" id="WEd-6B-NvS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Start Writing"/>
+                                <connections>
+                                    <action selector="btnStartDraw_Click:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gUc-f7-oZT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="b3f-SZ-PI2" secondAttribute="bottom" id="2VU-xj-rYc"/>
+                            <constraint firstItem="KzF-iB-Sz2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="37" id="EZ6-EW-X35"/>
+                            <constraint firstItem="4R3-zo-DT3" firstAttribute="top" secondItem="KzF-iB-Sz2" secondAttribute="bottom" constant="31" id="G0E-a9-uwD"/>
+                            <constraint firstItem="KzF-iB-Sz2" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="28" id="GOX-2f-FIp"/>
+                            <constraint firstItem="b3f-SZ-PI2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="PPn-8f-VhO"/>
+                            <constraint firstAttribute="trailing" secondItem="KzF-iB-Sz2" secondAttribute="trailing" constant="36" id="RoD-be-ajc"/>
+                            <constraint firstItem="4R3-zo-DT3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fbr-Xv-Xnn"/>
+                            <constraint firstItem="b3f-SZ-PI2" firstAttribute="top" secondItem="4R3-zo-DT3" secondAttribute="bottom" constant="79" id="izL-sG-BRJ"/>
+                            <constraint firstAttribute="trailing" secondItem="b3f-SZ-PI2" secondAttribute="trailing" id="uD4-yJ-lp2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnStart" destination="4R3-zo-DT3" id="gjj-wl-ir6"/>
+                        <outlet property="displayView" destination="b3f-SZ-PI2" id="FTK-kt-K6a"/>
+                        <outlet property="textField" destination="KzF-iB-Sz2" id="J4K-6E-kXu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="279.19999999999999" y="336.88155922038982"/>
+        </scene>
+    </scenes>
+</document>
